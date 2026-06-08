@@ -1,0 +1,75 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: #00a88f;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #008f7a;
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid #00a88f;
+  outline-offset: 2px;
+}
+
+main:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.terms-row input[type="checkbox"]:focus-visible {
+  outline: 3px solid #00a88f;
+  outline-offset: 2px;
+}
+
+input:focus-visible {
+  outline: 3px solid #00a88f;
+  outline-offset: 2px;
+  border-color: #00a88f;
+}
+
+input[type="checkbox"]:focus-visible {
+  outline: 3px solid #00a88f;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .step-enter {
+    animation: none;
+  }
+}
